@@ -23,8 +23,10 @@ int sumNumbersInText(const std::string& text) {
 }
 
 int main() {
-    std::cout << "Number extractor initialized.\n";
-    return 0;
-
+    std::string testText = "В 2023 году я купил 3 яблока за 150 рублей, а потом продал за 200.";
     
+    std::cout << "Текст: " << testText << "\n";
+    std::cout << "Сумма всех чисел в тексте: " << sumNumbersInText(testText) << "\n";
+    
+    return 0;
 }
