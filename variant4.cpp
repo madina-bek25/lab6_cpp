@@ -31,6 +31,19 @@ bool isValidIP(const std::string& ip) {
 }
 
 int main() {
-    std::cout << "IP Validator initialized.\n";
+    std::vector<std::string> testIPs = {
+        "192.168.1.1",
+        "255.255.255.255",
+        "256.100.50.25",
+        "192.168.1",
+        "192.168.01.1",
+        "abc.def.ghi.jkl"
+    };
+
+    std::cout << "--- Testing IP addresses ---\n";
+    for (const auto& ip : testIPs) {
+        std::cout << ip << " -> " 
+                  << (isValidIP(ip) ? "Valid" : "Invalid") << "\n";
+    }
     return 0;
 }
