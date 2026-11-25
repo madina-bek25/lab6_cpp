@@ -9,13 +9,12 @@ int sumNumbersInText(const std::string& text) {
 
     for (char c : text) {
         if (std::isdigit(c)) {
-            currentNumber += c; // Собираем цифры в число
+            currentNumber += c; 
         } else if (!currentNumber.empty()) {
-            sum += std::stoi(currentNumber); // Как только встретили не цифру - суммируем
-            currentNumber = ""; // Сбрасываем буфер
+            sum += std::stoi(currentNumber); 
+            currentNumber = ""; 
         }
     }
-    // Проверка на случай, если строка заканчивается цифрой
     if (!currentNumber.empty()) {
         sum += std::stoi(currentNumber);
     }
